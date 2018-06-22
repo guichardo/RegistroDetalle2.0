@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroDetalle2.0", "RegistroDetalle2.0\RegistroDetalle2.0.csproj", "{9315FDF1-BC47-405F-B35D-22A5AB070954}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroDetalle2", "RegistroDetalle2.0\RegistroDetalle2.csproj", "{9315FDF1-BC47-405F-B35D-22A5AB070954}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
