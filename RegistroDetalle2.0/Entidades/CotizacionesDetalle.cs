@@ -19,11 +19,11 @@ namespace RegistroDetalle2.Entidades
         public int Precio { get; set; }
         public int Importe { get; set; }
 
-        [ForeignKey("ArticuloId")]
+       /* [ForeignKey("ArticuloId")]
         public virtual Articulos Articulos { get; set; }
 
         [ForeignKey("PersonaId")]
-        public virtual Persona Persona { get; set; }
+        public virtual Persona Persona { get; set; }*/
 
         public CotizacionesDetalle()
         {

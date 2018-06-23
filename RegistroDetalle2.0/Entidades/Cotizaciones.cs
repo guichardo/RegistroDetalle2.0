@@ -17,7 +17,6 @@ namespace RegistroDetalle2.Entidades
         [StringLength(100)]
         public string Comentario { get; set; }
         public int Monto { get; set; }
-        [Browsable(false)]
 
         public virtual ICollection<CotizacionesDetalle> Detalle { get; set; }
 

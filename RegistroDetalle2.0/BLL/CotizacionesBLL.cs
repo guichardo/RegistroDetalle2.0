@@ -119,12 +119,12 @@ namespace RegistroDetalle2._0.BLL
                 cotizacion.Detalle.Count();
 
                 //Cargar los nombres de las personas y articulos
-                foreach (var item in cotizacion.Detalle)
+                /*foreach (var item in cotizacion.Detalle)
                 {
                     //forzando la persona y el articulo a cargarse
                     string s = item.Articulos.Descripcion;
                     string r = item.Persona.Nombres;
-                }
+                }*/
                 contexto.Dispose();
             }
 
