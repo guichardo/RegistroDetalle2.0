@@ -22,7 +22,7 @@ namespace RegistroDetalle2._0.UI.Consulta
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             //Inicializando el filtro en True
-            Expression<Func<Persona, bool>> filtro = x => true;
+            Expression<Func<Personas, bool>> filtro = x => true;
 
             int id;
             switch (filtrarcomboBox.SelectedIndex)

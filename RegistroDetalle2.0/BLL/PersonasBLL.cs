@@ -20,14 +20,14 @@ namespace RegistroDetalle2._0.BLL
         /// </summary>
         /// <param name="persona">Una instancia de Persona</param>
         /// <returns>Retorna True si guardo o Falso si falló </returns>
-        public static bool Guardar(Persona persona)
+        public static bool Guardar(Personas persona)
         {
             bool paso = false;
             //Creamos una instancia del contexto para poder conectar con la BD
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Persona.Add(persona) != null)
+                if (contexto.Personas.Add(persona) != null)
                 {
                     contexto.SaveChanges(); //Guardar los cambios
                     paso = true;
@@ -47,7 +47,7 @@ namespace RegistroDetalle2._0.BLL
         /// </summary>
         /// <param name="persona">Una instancia de Persona</param>
         /// <returns>Retorna True si Modifico o Falso si falló </returns>
-        public static bool Modificar(Persona persona)
+        public static bool Modificar(Personas persona)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
@@ -79,9 +79,9 @@ namespace RegistroDetalle2._0.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Persona persona = contexto.Persona.Find(id);
+                Personas persona = contexto.Personas.Find(id);
 
-                contexto.Persona.Remove(persona);
+                contexto.Personas.Remove(persona);
 
                 if (contexto.SaveChanges() > 0)
                 {
@@ -102,13 +102,13 @@ namespace RegistroDetalle2._0.BLL
         /// </summary>
         ///<param name="id">El Id de la persona que se desea encontrar </param>
         /// <returns>Retorna la persona encontrada </returns>
-        public static Persona Buscar(int id)
+        public static Personas Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Persona persona = new Persona();
+            Personas persona = new Personas();
             try
             {
-                persona = contexto.Persona.Find(id);
+                persona = contexto.Personas.Find(id);
                 contexto.Dispose();
             }
             catch (Exception)
@@ -124,13 +124,13 @@ namespace RegistroDetalle2._0.BLL
         /// </summary> 
         ///<param name="expression">Expression Lambda conteniendo los filtros de busqueda </param>
         /// <returns>Retorna una lista de personas</returns>
-        public static List<Persona> GetList(Expression<Func<Persona, bool>> expression)
+        public static List<Personas> GetList(Expression<Func<Personas, bool>> expression)
         {
-            List<Persona> Persona = new List<Persona>();
+            List<Personas> Persona = new List<Personas>();
             Contexto contexto = new Contexto();
             try
             {
-                Persona = contexto.Persona.Where(expression).ToList();
+                Persona = contexto.Personas.Where(expression).ToList();
                 contexto.Dispose();
             }
             catch (Exception)

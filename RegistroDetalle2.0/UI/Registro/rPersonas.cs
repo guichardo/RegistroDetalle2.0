@@ -21,7 +21,7 @@ namespace RegistroDetalle2._0.UI.Registro
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(IdnumericUpDown.Value);
-            Persona persona = BLL.PersonasBLL.Buscar(id);
+            Personas persona = BLL.PersonasBLL.Buscar(id);
 
             if (persona != null)
             {
@@ -49,7 +49,7 @@ namespace RegistroDetalle2._0.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Persona persona;
+            Personas persona;
             bool Paso = false;
 
 
@@ -82,9 +82,9 @@ namespace RegistroDetalle2._0.UI.Registro
                 MessageBox.Show("No se pudo eliminar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private Persona LlenaClase()
+        private Personas LlenaClase()
         {
-            Persona persona = new Persona();
+            Personas persona = new Personas();
 
             persona.PersonaId = Convert.ToInt32(IdnumericUpDown.Value);
             persona.Fecha = FechadateTimePicker.Value;

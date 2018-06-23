@@ -13,7 +13,7 @@ namespace RegistroDetalle2.DAL
     public class Contexto : DbContext
     {
         public DbSet<Articulos> Articulos { get; set; }
-        public DbSet<Persona> Persona { get; set; }
+        public DbSet<Personas> Personas { get; set; }
         public DbSet<Cotizaciones> Cotizaciones { get; set; }
 
         // base("ConStr") para pasar la conexion a la clase base de EntityFramework 

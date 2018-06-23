@@ -61,7 +61,7 @@
     <Compile Include="Entidades\Articulos.cs" />
     <Compile Include="Entidades\Cotizaciones.cs" />
     <Compile Include="Entidades\CotizacionesDetalle.cs" />
-    <Compile Include="Entidades\Persona.cs" />
+    <Compile Include="Entidades\Personas.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

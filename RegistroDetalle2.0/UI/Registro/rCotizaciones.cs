@@ -119,7 +119,7 @@ namespace RegistroDetalle2._0.UI.Registro
         }
         private void LlenarComboBox()
         {
-            Repositorio<Persona> repositorio = new Repositorio<Persona>(new Contexto());
+            Repositorio<Personas> repositorio = new Repositorio<Personas>(new Contexto());
             Repositorio<Articulos> repositori = new Repositorio<Articulos>(new Contexto());
             PersonacomboBox.DataSource = repositorio.GetList(c => true);
             PersonacomboBox.ValueMember = "PersonaId";

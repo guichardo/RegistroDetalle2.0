@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace RegistroDetalle2.Entidades
 {
     //Debe ser PUBLIC para que sea visible para las demas capas
-    public class Persona
+    public class Personas
     {
         //Esta es la llave primaria
         [Key]//hay que importar System.ComponentModel.DataAnnotations;
@@ -17,7 +17,7 @@ namespace RegistroDetalle2.Entidades
 
 
         //todo: aprender a crear las propiedades de la forma corta.
-        public Persona()
+        public Personas()
         {
 
         }
