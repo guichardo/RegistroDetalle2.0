@@ -17,6 +17,7 @@ namespace RegistroDetalle2._0.UI.Registro
         public rCotizaciones()
         {
             InitializeComponent();
+            LlenarComboBox();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace RegistroDetalle2._0.UI.Registro
             CantidadtextBox.Clear();
             PreciotextBox.Clear();
             ImportetextBox.Clear();
-            TotaltextBox.Clear();
+            TotalnumericUpDown.Value = 0;
 
             DetalledataGridView.DataSource = null;
             MyerrorProvider.Clear();
@@ -216,6 +217,30 @@ namespace RegistroDetalle2._0.UI.Registro
             //Ocultar columnas
             DetalledataGridView.Columns["Id"].Visible = false;
             DetalledataGridView.Columns["CotizacionId"].Visible = false;
+        }
+
+        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PreciotextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (Convert.ToInt32(PreciotextBox.Text) != 0)
+                {
+
+                    TotalnumericUpDown.Value += Convert.ToInt32(PreciotextBox.Text);
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+
+            }
         }
     }
 }

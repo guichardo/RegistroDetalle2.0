@@ -19,9 +19,9 @@ namespace RegistroDetalle2.DAL
         // base("ConStr") para pasar la conexion a la clase base de EntityFramework 
         public Contexto() : base("ConStr") { }
 
-        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-        }*/
+        }
     }
 }
