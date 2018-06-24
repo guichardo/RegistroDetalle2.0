@@ -21,8 +21,13 @@ namespace RegistroDetalle2._0.BLL
             try
             {
                 if (contexto.Cotizaciones.Add(cotizacion) != null)
-                {
-                    contexto.SaveChanges();
+                { 
+                    foreach (var item in cotizacion.Detalle)
+                    {
+                        contexto.Articulos.Find(item.ArticuloId).CantidadCotizada -= item.Cantidad;
+                    }
+
+                contexto.SaveChanges();
                     paso = true;
                 }
 
@@ -82,6 +87,13 @@ namespace RegistroDetalle2._0.BLL
             {
 
                 Cotizaciones cotizacion = contexto.Cotizaciones.Find(id);
+
+                foreach (var item in cotizacion.Detalle)
+                {
+                    var ciudad = contexto.Articulos.Find(item.ArticuloId);
+                    ciudad.CantidadCotizada += item.Cantidad;
+                }
+
                 contexto.Cotizaciones.Remove(cotizacion);
                 if (contexto.SaveChanges() > 0)
                 {
