@@ -219,28 +219,5 @@ namespace RegistroDetalle2._0.UI.Registro
             DetalledataGridView.Columns["CotizacionId"].Visible = false;
         }
 
-        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PreciotextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (Convert.ToInt32(PreciotextBox.Text) != 0)
-                {
-
-                    TotalnumericUpDown.Value += Convert.ToInt32(PreciotextBox.Text);
-
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-
-            }
-        }
     }
 }
